@@ -1,20 +1,24 @@
 import { useState, useEffect } from 'react'
-import { getHorizonsData } from './utils/horizons'
-
+import { socket } from './utils/socket'
 
 function App() {
 
+  const [RG, setRG] = useState();
+
   useEffect(()=>{
 
-  const data = getHorizonsData()
-   console.log(data)
+
+
+    socket.on("newHorizons", data => {
+      setRG(data.RG)
+    })
 
   }, [])
 
 
   return (
     <>
-      
+      <h1>Distance from earth {RG} km</h1>
     </>
   )
 }
