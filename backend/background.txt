@@ -1,0 +1,19 @@
+BACKGROUND:\n' +
+    '  Dummy payload from the first launch of SpaceX Falcon Heavy launch vehicle. \n' +
+    '  Consists of a standard Tesla Roadster automobile and a spacesuit-wearing \n' +
+    '  mannequin nicknamed "Starman". \n' +
+    ' \n' +
+    "  Also includes a Hot Wheels toy model Roadster on the car's dash with a \n" +
+    '  mini-Starman inside. A data storage device placed inside the car contains \n' +
+    `  a copy of Isaac Asimov's "Foundation" novels. A plaque on the attachment \n` +
+    '  fitting between the Falcon Heavy upper stage and the Tesla is etched with \n' +
+    '  the names of more than 6,000 SpaceX employees.\n' +
+    ' \n' +
+    '  After orbiting the Earth for 5 hours, a third burn by the second stage was \n' +
+    '  completed at approximately 02:30 UTC Feb 7, placing the dummy payload in a \n' +
+    '  heliocentric orbit having a perihelion of 0.99 au and aphelion ~1.67 au.\n' +
+    '\n' +
+    '  The object stack consists of a Merlin 1D Vacuum second stage with Extended \n' +
+    '  Nozzle, Payload Attachment Fitting, and Tesla Roadster on mount.\n' +
+    '\n' +
+    '  Roadster mass: ~1250 kg (with batteries), ~800 kg (without ESS/batteries)\n'
