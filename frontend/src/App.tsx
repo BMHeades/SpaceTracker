@@ -5,8 +5,27 @@ import { ElapsedTime } from './components/ElapsedTime';
 import { Gauge } from "../components/thegridcn/gauge"
 import { StatusBar } from "../components/thegridcn/status-bar"
 import { StatCard } from "../components/thegridcn/stat-card"
-import { Card, CardHeader, CardTitle, CardContent } from "../components/ui/card"
+import { Card, CardContent } from "../components/ui/card"
 import { Separator } from "../components/ui/separator"
+
+interface Data{
+  headers: {
+    active: number
+  }
+  coordinates: {
+    position: {
+      X: number
+      Y: number
+      Z: number
+    }
+    velocity: {
+      VX: number
+      VY: number
+      VZ: number
+    }
+    RG: number
+  }
+}
 
 function App() {
 
@@ -16,7 +35,7 @@ function App() {
 
   useEffect(() => {
 
-    const newHorizonsHandler = (data) => {
+    const newHorizonsHandler = (data: Data) => {
 
       setRG(data.coordinates.RG * 0.62137 - 3959)
       setVelocity(Math.sqrt(data.coordinates.velocity.VX ** 2 + data.coordinates.velocity.VY ** 2 + data.coordinates.velocity.VZ ** 2) * 2232)
