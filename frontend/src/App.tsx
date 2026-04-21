@@ -8,6 +8,8 @@ import { StatCard } from "../components/thegridcn/stat-card"
 import { Card, CardContent } from "../components/ui/card"
 import { Separator } from "../components/ui/separator"
 
+import starman from "./assets/starman.jpg"
+
 interface Data{
   headers: {
     active: number
@@ -60,7 +62,7 @@ function App() {
 
           <Card style={{ gridArea: "image" }} className=" p-0 overflow-hidden" >
             <img
-              src="src/assets/starman.jpg"
+              src={starman}
               alt="starman floating in space"
               className="w-full h-full object-cover object-center filter grayscale opacity-75"
             />
@@ -99,7 +101,10 @@ function App() {
 
       <Separator />
       <footer className = "font-mono p-3 flex justify-between items-center text-foreground/80"> 
-        <p>DATA FROM JPN HORIZONS</p> 
+        <p>DATA FROM 
+          
+          <a href="https://ssd.jpl.nasa.gov/horizons/">JPL HORIZONS</a>
+          </p> 
        <p >© 2026 meo studios</p>
       </footer>
     </>
