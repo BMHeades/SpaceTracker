@@ -9,7 +9,7 @@ const pullingInterval = 10000;
 
 const io = new Server({
   cors: {
-    origin: ["http://localhost:5173", "https://starmantracker.netlify.app/"]
+    origin: ["https://starmantracker.netlify.app/" ]
   }
 });
 
