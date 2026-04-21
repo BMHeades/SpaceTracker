@@ -1,4 +1,4 @@
-const getUTCText = (now) => {
+export const getUTCText = (now) => {
     const timeArray = now.toISOString().split('T')
     return timeArray[0] + " " + timeArray[1].split('.')[0]
 }

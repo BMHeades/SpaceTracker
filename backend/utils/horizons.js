@@ -1,6 +1,6 @@
 import { getNowAndFuture } from "./time.js";
 
-const time = getNowAndFuture();
+
 
 export async function getHorizonsData(majorBodyID) {
     const params = new URLSearchParams({
@@ -8,8 +8,8 @@ export async function getHorizonsData(majorBodyID) {
         COMMAND: `'${majorBodyID}'`, // TESLA ROADSTER
         OBJ_DATA: 'NO',
         EPHEM_TYPE: 'VECTORS',
-        START_TIME: `'${time.now}'`,
-        STOP_TIME: `'${time.future}'`,
+        START_TIME: `'${getNowAndFuture().now}'`,
+        STOP_TIME: `'${getNowAndFuture().future}'`,
     }); 
     const url = `https://ssd.jpl.nasa.gov/api/horizons.api?${params}`;
     const response = await fetch(url, {
@@ -18,3 +18,6 @@ export async function getHorizonsData(majorBodyID) {
     })
     return response.json()
 }
+
+const data = await getHorizonsData(-143205);
+console.log(data)
